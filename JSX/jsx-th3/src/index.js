@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
+// thực hành 3: Tạo Element thể hiện danh sách các loại quả sử dụng hàm hàm React.createElement.
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ const fruits = ['Apple', 'Banana', 'Orange', 'Apricot', 'Black rowan', 'Cranberry'];
+ const app =(
+  <div>
+      <h1>TH3: List of fruits</h1>
+       <ul>
+         { fruits.map((item) => (
+          <li>{ item }</li>
+        )) }
+      </ul>
+    </div>
+ );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(app);
