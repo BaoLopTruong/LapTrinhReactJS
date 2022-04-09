@@ -1,17 +1,55 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// bai tap 1: Tạo Element thể hiện bảng thông tin các sinh viên trong lớp học
+
+const students = [
+  {
+    name: "Le Ngoc Bao",
+    contact: "Nguyen Thi Bich Thuy",
+    country: "VietNam"
+  },
+  {
+    name: "Ernst Handel",
+    contact: "Roland Mendel",
+    country: "Austria"
+  },
+  {
+    name: "Dany Bennett",
+    contact: "Helen Bennett",
+    country: "America"
+  },
+  {
+    name: "David Beckham",
+    contact: "Victoria Beckham",
+    country: "England"
+  }
+];
+
+const show = (
+  <div>
+    <h2 style= {{textAlign: "center"}}>Students</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+      { students.map((student) => (
+          <tr>
+            <td>{student.name}</td>
+            <td>{student.contact}</td>
+            <td>{student.country}</td>
+          </tr>
+        )) }
+      </tbody>
+    </table>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(show);
