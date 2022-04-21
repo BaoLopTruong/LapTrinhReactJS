@@ -8,7 +8,7 @@ class App extends Component {
       color: 'black',
     };
   }
- 
+ //duoc goi ngay sau khi han render duoc thuc thi
   componentDidMount() {
     setTimeout(() => {
       this.setState({ color: 'pink' });
