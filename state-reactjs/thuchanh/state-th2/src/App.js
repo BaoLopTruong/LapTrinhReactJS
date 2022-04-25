@@ -2,35 +2,28 @@
 import './App.css';
 import  { Component } from 'react';
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: 'black',
-    };
+  constructor(){
+    super();
+    this.state= {
+      color: "black"
+    }
   }
- //duoc goi ngay sau khi han render duoc thuc thi
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ color: 'pink' });
-    }, 5000);
-  }
- 
-  render() {
-    return (
-      <div>
-      <h1 style={{textAlign: "center"}}>Thay đổi màu nền backgroundColor bằng setTimeout</h1>
-        <div
-          style={{
-            backgroundColor: this.state.color,
-            paddingTop: 20,
-            width: 400,
-            height: 80,
-            margin: 'auto'
-          }}
-        />
-      </div>
-    );
-  }
+componentDidMount(){
+  console.log("compoentdidmount")
+  setTimeout(() => {
+    this.setState({color: "pink"});
+    
+  }, 3000);
 }
 
+  render(){
+    console.log("render")
+    return(
+      <div style={{backgroundColor:this.state.color}}>
+        <h3>  hello world</h3>
+      </div>
+    )
+  }
+
+}
 export default App;
