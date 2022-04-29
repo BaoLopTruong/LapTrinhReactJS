@@ -23,10 +23,6 @@ export default function ClockHook(){
         updateTime();
     },1000)
 
-
-
-
-
     return (
         <div style={{textAlign:"center"}}>
             <h1>Homework1: Build Clock Hook get real time</h1>
