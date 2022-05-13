@@ -1,43 +1,33 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-function Login  (){
-  let navigate = useNavigate();
 
-  const [form, setForm] = useState({})
-
-  function handleChange (event) {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value
-    })
-   
-  }
-  function handleSubmit() {
-      const isValid =  form.email && form.password;
-    // alert(isValid ? 'Sign in success!!!' : 'Please fill out the form!!!')
-    if(isValid){
-      navigate("/home", {state:form})
-      console.log(navigate)
-    }else{
-      alert("Wrong account. Please try again");
+const Login = () => {
+    const [account, setAccount] = useState({ username: '', password: '' });
+    const navigate = useNavigate();
+    const handleChange = (e) => {
+        setAccount({ ...account, [e.target.name]: e.target.value });
     }
-  }
+    const handleSubmit = (e) => {
+        e.preventDefault(); // prevent submit default event
+        if (account.username === 'admin@gmail.com' && account.password === 'letmein') {
+            navigate('/employee', { state: account });
+        }
+    }
     return (
-        <div>
-          <h1>Sign up</h1>
-          <form >
-            <div className="custom-input">
-              <label>Email </label>
-              <input name="email" value={form.email || ''}  onChange={e =>handleChange(e)} />
-            </div>
-            <div className="custom-input">
-              <label>Password </label>
-              <input type="password" name="password" value={form.password || ''} onChange={e =>handleChange(e)}/>
-            </div>
-            <button type="button"   onClick={handleSubmit} >Submit</button>
-          </form>
+        <div className="container pt-5">
+            <form>
+                <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">Email address</label>
+                    <input name="username" type="email" className="form-control" placeholder="Enter email" onKeyUp={handleChange}></input>
+                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="exampleInputPassword1">Password</label>
+                    <input name="password" type="password" className="form-control" placeholder="Password" onKeyUp={handleChange}></input>
+                </div>
+                <button type="submit" className="btn btn-primary mt-3" onClick={handleSubmit}>Login</button>
+            </form>
         </div>
-      )
+    )
 }
-
 export default Login;
