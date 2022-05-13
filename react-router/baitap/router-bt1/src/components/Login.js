@@ -12,12 +12,15 @@ function Login  (){
     })
    
   }
-  function handleSubmit(event) {
-    // const isValid =  form.email && form.password;
+  function handleSubmit() {
+    //  const isValid =  form.email && form.password;
     // alert(isValid ? 'Sign in success!!!' : 'Please fill out the form!!!')
-    console.log(form)
-    navigate("/home", {state:{email: event.target.value} } )
-    console.log(navigate)
+    if(form.email === 'admin@gmail.com' && form.password === "letmein"){
+      navigate("/home", {state:form } )
+      console.log(navigate)
+    }else{
+      alert("Wrong account. Please try again");
+    }
   }
     return (
         <div>
@@ -25,13 +28,13 @@ function Login  (){
           <form >
             <div className="custom-input">
               <label>Email </label>
-              <input name="email" value={form.email || ''} onChange={e =>handleSubmit(e)} />
+              <input name="email" value={form.email || ''}  onChange={e =>handleChange(e)} />
             </div>
             <div className="custom-input">
               <label>Password </label>
-              <input type="password" name="password" value={form.password || ''} onChange={handleChange}/>
+              <input type="password" name="password" value={form.password || ''} onChange={e =>handleChange(e)}/>
             </div>
-            <button type="button"   >Submit</button>
+            <button type="button"   onClick={handleSubmit} >Submit</button>
           </form>
         </div>
       )
