@@ -15,8 +15,12 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
             {/* <a href="/posts/first-post">this page!</a> */}
-            <Link href={'/posts/first-post'}>zthis page!z</Link>
+            <Link href='/posts/first-post'>zthis page!z</Link>
         </h1>
+        <h2 className={styles.title}>
+            
+            <Link href='/about'>About</Link>
+        </h2>
 
         <p className={styles.description}>
           Get started by editing{' '}
