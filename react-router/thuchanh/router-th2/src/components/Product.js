@@ -1,11 +1,12 @@
-import { useParams } from "react-router-dom";
+import {useParams} from 'react-router-dom';
 
-function Product() {
-  let { categoryId } = useParams();
-  return (
+function Product(){
+  let {categoryId }= useParams();
+  return(
     <div>
-      <h3>Id selected {categoryId} </h3>
+      <h2> Id Selected: {categoryId}</h2>
     </div>
-  );
+  )
 }
+
 export default Product;

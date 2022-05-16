@@ -1,22 +1,25 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
-function Category() {
-  let navigate = useNavigate();
-  const sendDataToProduct = event => {
+function Categorry(){
+  let navigate =useNavigate();
+  const sendData = (event) =>{
     navigate(`/product/${event.target.value}`);
   };
-  return (
-    <>
-      <h2>Select a Category:</h2>
-      <select defaultValue="default" onChange={e => sendDataToProduct(e)}>
-        <option value="default" disabled hidden>
-          Choose your car
-        </option>
+    return(
+      <div>
+        <h2>
+          Select Categorry
+        </h2>
+        <select onChange={(e) =>{sendData(e)}}>
+        <option value=""> Choose your car</option>
         <option value="1">Honda</option>
-        <option value="2">Suzuki</option>
-        <option value="3">Yamaha</option>
-      </select>
-    </>
-  );
+        <option value="2"> Suzuki</option>
+        <option value="3"> Yamaha</option>
+
+
+
+        </select>
+      </div>
+    )
 }
-export default Category;
+export default Categorry;
