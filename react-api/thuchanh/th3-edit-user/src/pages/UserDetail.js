@@ -36,14 +36,13 @@ export default function UserDetails() {
               res.data
             )} successfully!!!`
           );
-        //   window.location.href = "/";
-          console.log(user)
+          window.location.href = "/";
+          console.log(res)
         })
         .catch(err => {
           throw err;
         });
     }
-    // console.log(user)
     return (
       <div>
         <h1>User details</h1>
