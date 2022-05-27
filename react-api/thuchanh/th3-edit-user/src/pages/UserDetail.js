@@ -6,6 +6,8 @@ export default function UserDetails() {
     const { userId } = useParams();
     const isCreate = !userId;
     const [user, setUser] = useState({});
+    const [users, setUsers] = useState([]);
+
   
     useEffect(() => {
       if (userId) {
@@ -36,13 +38,32 @@ export default function UserDetails() {
               res.data
             )} successfully!!!`
           );
-          window.location.href = "/";
+         // window.location.href = "/";
           console.log(res)
+         
         })
         .catch(err => {
           throw err;
-        });
+        })
+        .finally(()=>{
+          showData()
+          .then(res =>{
+            setUsers(res.data);
+        })
+        .catch(err =>{
+            throw err;
+        })
+        })
+
     }
+
+    const showData = async () =>{
+      await new Promise(resolve => {
+        setTimeout(resolve, 1000);
+      });
+      return await axios.get("http://localhost:3001/api/users");
+    }    
+  
     return (
       <div>
         <h1>User details</h1>
@@ -68,6 +89,14 @@ export default function UserDetails() {
             Submit
           </button>
         </form>
+        <div>
+              <h1>Users</h1>
+              <ul>
+                  {users.map(user =>(
+                    <li key={user.id}> {user.name}</li>
+                  ))}
+              </ul>
+          </div>
       </div>
     );
   }
