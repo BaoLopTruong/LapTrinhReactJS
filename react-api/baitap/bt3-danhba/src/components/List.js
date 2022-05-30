@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-
+import {Link} from 'react-router-dom'
 export default function List() {
     const [books, setBook] = useState([]);
     useEffect(() => {
@@ -34,7 +34,7 @@ export default function List() {
         <div>
 
             <div>
-                <h2>To Do List</h2> <button type='button' onClick={handleCreate}> Create Book</button>
+                <h2>Contacts</h2> <button type='button' onClick={handleCreate}> Create Contact</button>
                 <table>
                     <thead>
                         <tr>
@@ -43,7 +43,6 @@ export default function List() {
                             <th>Image</th>
                             <th>Email</th>
                             <th>Phone</th>
-
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -57,6 +56,7 @@ export default function List() {
                                 <td>{book.phone}</td>
                                 <td>
                                     <button id={book.id} onClick={handleChange} className="mx-4 btn btn-warning">Edit</button>
+                                    {/* <Link href={`danhba/${book.id}`}> <button>Edit</button></Link> */}
                                     <button id={book.id} onClick={handleDelete} className="mx-4 btn btn-danger">Delete</button>
                                 </td>
                             </tr>
