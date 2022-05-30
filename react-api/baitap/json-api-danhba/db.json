@@ -1,25 +1,25 @@
 {
-    "danhba":[
-        {
-            "id": 1,
-            "name": "Peter",
-            "image": "https://v2.convertapi.com/d/fqy0avfblxhazsoxi08cdgrpxhrkdorg",
-            "email": "peter@gmail.com",
-            "phone": "0912123109"
-            },
-            {
-            "id": 2,
-            "name": "Richard",
-            "image": "https://v2.convertapi.com/d/yyxkdx7rrfbmi3gan92vn08kd14537sp",
-            "email": "richard@gmail.com",
-            "phone": "0912123123"
-            },
-            {
-            "id": 3,
-            "name": "Beck",
-            "image": "https://v2.convertapi.com/d/7lg49iqes6rl1r85vvzinfa2pduymb0i",
-            "email": "beck@gmail.com",
-            "phone": "0912123121"
-            }
-    ]
+  "danhba": [
+    {
+      "id": 1,
+      "name": "Peter",
+      "image": "https://st.quantrimang.com/photos/image/2021/05/21/AVT-Doi16-4.jpg",
+      "email": "peter@gmail.com",
+      "phone": "0912123109"
+    },
+    {
+      "id": 2,
+      "name": "Richard",
+      "image": "https://v2.convertapi.com/d/yyxkdx7rrfbmi3gan92vn08kd14537sp",
+      "email": "richard@gmail.com",
+      "phone": "0912123123"
+    },
+    {
+      "id": 3,
+      "name": "Beck",
+      "image": "https://v2.convertapi.com/d/7lg49iqes6rl1r85vvzinfa2pduymb0i",
+      "email": "beck@gmail.com",
+      "phone": "0912123121"
+    }
+  ]
 }
