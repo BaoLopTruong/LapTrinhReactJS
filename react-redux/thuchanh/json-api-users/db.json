@@ -1,16 +1,22 @@
 {
-    "users":[
-        {
-            "id": 1,
-            "name": "bao",
-            "email": "bao@gmail.com",
-            "website": "bao123.org"
-        },
-        {
-            "id": 2,
-            "name": "peter",
-            "email": "peter@gmail.com",
-            "website": "peter123.org"
-        }
-    ]
+  "users": [
+      {
+          "id": 1,
+          "name": "Peter",
+          "email": "peter@123.org",
+          "website": "peter.com"
+      },
+      {
+        "id": 2,
+        "name": "Linda",
+        "email": "linda@123.org",
+        "website": "linda.com"
+    },
+    {
+        "id": 3,
+        "name": "Tom",
+        "email": "tom@123.org",
+        "website": "tom.com"
+    }
+  ]
 }
