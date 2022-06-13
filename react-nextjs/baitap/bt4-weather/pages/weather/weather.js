@@ -1,19 +1,25 @@
 import axios from 'axios';
 export async function getStaticProps() {
-    const res = await axios.get('http://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=63b464d1dc95934f42129614e6499735');
+    const MY_API_KEY = 'ee6de521fda3d6518c1c40e36c8ccb7a';
+    const res = await axios.get('https://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=' + MY_API_KEY);
     return {
         props: {
-            weather: res.data
+            weatherInfo: res.data
         }
     }
 }
 
-export default function Weather({ weather }) {
-    console.log(weather);
+export default function WeatherHome({ weatherInfo }) {
+    console.log(weatherInfo);
+    const temp = weatherInfo.main.temp - 273.15;
     return (
         <div>
-            <h2>WEATHER INFO</h2>
-           
+            <h2>Current weather Info</h2>
+            <ul>
+                <li>Country - {weatherInfo.sys.country}</li>
+                <li>City - {weatherInfo.name}</li>
+                <li>Temperature -  {temp}</li>
+            </ul>
         </div>
     )
 }
