@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Link href='/covid-api/home'>CovidHome</Link>
+    
     </div>
   )
 }
