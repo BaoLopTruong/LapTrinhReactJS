@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import logo from '../images/lnb.jpg'
 export default function List() {
     const [books, setBook] = useState([]);
     useEffect(() => {
