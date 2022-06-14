@@ -7,11 +7,26 @@ export default function AddContact() {
     const isCreate = !bookId;
     const [contact, setContact] = useState({});
   
+    function handleChangeImage(event) {
+      
+      if(event.target.files && event.target.files[0]){
+        // console.log(URL.createObjectURL(event.target.files[0]))
+        //setContact({ image: URL.createObjectURL(event.target.files[0]) });
+        let reader = new FileReader();
+        reader.onload = (event) => {
+          setContact({ image: event.target.result });
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    }
+
     function handleChange(event) {
-      setContact({
-        ...contact,
-        [event.target.name]: event.target.value
-      });
+   
+        setContact({
+          ...contact,
+          [event.target.name]: event.target.value
+        });
+      
     }
   
     function handleSubmit() {
@@ -33,7 +48,9 @@ export default function AddContact() {
         })
 
     }   
+    
     return (
+     
       <div>
         <h1>Contacts</h1>
         <form>
@@ -49,7 +66,7 @@ export default function AddContact() {
           <br></br>
           <div>
             <label>Image:</label>
-            <input style={{marginLeft: "26px"}} name="image" value={contact.image || ""} onChange={handleChange} />
+            <input type='file' style={{marginLeft: "26px"}} name="image"  onChange={handleChangeImage} />
           </div>
           <br></br>
           <div>

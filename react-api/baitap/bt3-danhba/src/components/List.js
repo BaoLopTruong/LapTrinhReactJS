@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import logo from '../images/lnb.jpg'
 export default function List() {
     const [books, setBook] = useState([]);
     useEffect(() => {
         axios.get('http://localhost:3001/danhba')
             .then(res => {
-                setBook(res.data)
+                setBook( res.data)
+                console.log('book',res)
             })
             .catch(err => {
                 throw err;
@@ -51,7 +52,7 @@ export default function List() {
                             <tr key={book.id}>
                                 <td>{book.id}</td>
                                 <td>{book.name}</td>
-                                <td> <image style={{width: '50px', height: '50px'}} href={book.image}></image></td>
+                                <td> <img style={{width: '50px', height: '50px'}} src={book.image}></img></td>
                                 <td>{book.email}</td>
                                 <td>{book.phone}</td>
                                 <td>
@@ -61,9 +62,10 @@ export default function List() {
                                 </td>
                             </tr>
                         ))}
-
+                    
                     </tbody>
                 </table>
+               
             </div>
         </div>
     )
