@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Bao"
+    },
+    {
+      "id": 2,
+      "name": "boi"
+    },
+    {
+      "id": 3,
+      "name": "Ben2"
+    },
+    {
+      "id": 4,
+      "name": "Tommy1"
+    },
+    {
+      "id": 5,
+      "name": "Ben2"
+    },
+    {
+      "id": 6,
+      "name": "todo 6"
+    },
+    {
+      "id": 7,
+      "name": "Ben2"
+    },
+    {
+      "id": 8,
+      "name": "Bin"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "hello"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "hello B"
+    }
+  ]
+}
