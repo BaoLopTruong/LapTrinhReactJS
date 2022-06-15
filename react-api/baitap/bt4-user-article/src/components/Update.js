@@ -2,6 +2,8 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import Article from './Article';
 export default function Update(){
     
     const { userId } = useParams();
@@ -55,6 +57,12 @@ export default function Update(){
           </div>
           <br></br>
             </form>
+            <Article userId={userId} ></Article>
+           
+                <Routes>
+                        <Route path={`/update/${userId}/*`} element={<Article/>}></Route>
+                </Routes>
+           
         </div>
     )
 }

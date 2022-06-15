@@ -14,7 +14,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<ListUser />} />
         <Route path={"/add"} element={<Add />} />
-        <Route path={`/update/:userId`} element={<Update />} />
+        <Route path={`/update/:userId/*`} element={<Update />} />
       </Routes>
     </BrowserRouter>
   );

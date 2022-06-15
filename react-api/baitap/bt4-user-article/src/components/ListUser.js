@@ -22,6 +22,16 @@ export default function ListUser(){
         window.location.href = `update/${e.target.id}`;
     };
 
+    const handleDelete = (e) =>{
+        axios.delete()
+        .then(res =>{
+            alert('delete successfully')
+        })
+        .catch(err =>{
+            alert('something wrong')
+        })
+    }
+
     return(
         <div>
             <h2>Users</h2>
@@ -43,7 +53,7 @@ export default function ListUser(){
                             <td>{user.name}</td>
                             <td>
                                 <button id={user.id} onClick={handleChange}>Edit</button>
-                                <button>Delete</button>
+                                <button id={user.id} onClick={handleDelete}>Delete</button>
                             </td>
                         </tr>
                     )))}

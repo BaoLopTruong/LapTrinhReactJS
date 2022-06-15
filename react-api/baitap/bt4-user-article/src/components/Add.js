@@ -1,6 +1,7 @@
 
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+
 export default function Add(){
     const [users, setUsers] = useState({})
     const [user, setUser] = useState({})
@@ -52,6 +53,7 @@ export default function Add(){
           </div>
           <br></br>
             </form>
+         
         </div>
     )
 }
