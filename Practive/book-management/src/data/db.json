@@ -1,0 +1,79 @@
+{
+    "users":[
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "letmein",
+            "author": "manager"
+        },
+        {
+            "id": 2,
+            "username": "staff1",
+            "password": "letmein",
+            "author": "staff"
+        }
+    ],
+    "profiles": [
+        {
+            "id":1,
+            "userId":1,
+            "name": "Bảo",
+            "phone": "0977819518",
+            "email": "admin@gmail.com"
+        }
+    ],
+    "books": [
+        {
+            "id": 1,
+            "name": "Dac Nhan Tam",
+            "price": "270.000",
+            "amount": 50
+        },
+        {
+            "id": 2,
+            "name": "Những điều bạn chưa biết về Khoa học",
+            "price": "270.000",
+            "amount": 50
+        },
+        {
+            "id": 3,
+            "name": "Cô Gái đến từ hôm qua",
+            "price": "270.000",
+            "amount": 50
+        }
+    ],
+    "categories":[
+        {
+            "id": 1,
+            "bookId": 1,
+            "name": "Văn Học"
+        },
+        {
+            "id": 2,
+            "bookId": 2,
+            "name": "Khoa Học"
+        },
+        {
+            "id": 1,
+            "bookId": 3,
+            "name": "Văn Học"
+        }
+    ],
+    "producers":[
+        {
+            "id": 1,
+            "bookId": 1,
+            "name": "Kim Đồng"
+        },
+        {
+            "id": 2,
+            "bookId": 2,
+            "name": "Thiên Long"
+        }
+    ]
+    
+
+    
+    
+    
+}
