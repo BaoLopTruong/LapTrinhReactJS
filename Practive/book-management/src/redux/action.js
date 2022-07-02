@@ -14,7 +14,7 @@ export const checkLogin = payload => {
       );
     const { username, password } = payload;
     response.data.map( user =>{
-        if(username === "admin" && password === "letmein" && user.author === "manager"){
+        if(username === user.username && password === user.password && user.author === "manager"){
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload
@@ -22,9 +22,12 @@ export const checkLogin = payload => {
             dispatch(getBook());
             alert("dang nhap thanh cong")
         }
-        else {
-            // alert("login failure!");
-        
+        if (username === user.username && password === user.password && user.author === "staff") {
+            alert("login failure!");
+            dispatch({
+              type: LOGIN_SUCCESS,
+              payload
+            });
           }
     })
   };
@@ -64,7 +67,7 @@ export const getBook = () => {
       "http://localhost:3001/books"
     );
     dispatch({
-      type: FETCH_USER_SUCCESS,
+      type: FETCH_BOOK_SUCCESS,
       payload: response.data
     });
   };
