@@ -72,3 +72,16 @@ export const getBook = () => {
     });
   };
 };
+
+export const createBook = (book) => {
+  return async dispatch => {
+    await axios.post("http://localhost:3001/books", book)
+    .then(res =>{
+      alert("tao moi thanh cong")
+      dispatch(getBook());
+    })
+    .catch(err =>{
+      alert("something wrong")
+    })
+  };
+};
