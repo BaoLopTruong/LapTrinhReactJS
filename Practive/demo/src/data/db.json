@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "letmein",
+      "decentralization": "boss"
+    },
+    {
+      "id": 2,
+      "username": "staff",
+      "password": "letmein",
+      "decentralization": "staff"
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Lê Ngọc Bảo",
+      "phone": "0977819518",
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "Lê Bảo Ngọc",
+      "phone": "0977819518",
+      "email": "staff@gmail.com"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Toi thay hoa vang tren co xanh 1",
+      "author": "Nguyễn Nhật Ánh",
+      "producer": "Kim Đồng",
+      "price": "200.000"
+    },
+    {
+      "id": 2,
+      "name": "Đường Kách Mệnh",
+      "author": "Hồ Chí Minh",
+      "producer": "Kim Đồng",
+      "price": "vô giá"
+    },
+    {
+      "id": 5,
+      "name": "Táo",
+      "author": "unknow",
+      "producer": "Kim Đồng",
+      "price": "21.0000"
+    },
+    {
+      "id": 6,
+      "name": "Bàn ăn gỗ Theresad",
+      "author": "unknow",
+      "producer": "Kim Đồng",
+      "price": "400.000"
+    },
+    {
+      "id": 7,
+      "name": "12 Rules in life",
+      "author": "Johnathan",
+      "producer": "Marvel",
+      "price": "250.000"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "name": "Văn Học"
+    },
+    {
+      "id": 1,
+      "bookId": 2,
+      "name": "Văn Học"
+    }
+  ]
+}
