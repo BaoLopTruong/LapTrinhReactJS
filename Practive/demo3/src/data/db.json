@@ -1,0 +1,64 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "admin",
+        "password": "letmein",
+        "decentralization": "boss"
+      },
+      {
+        "id": 2,
+        "username": "staff",
+        "password": "letmein",
+        "decentralization": "staff"
+      }
+    ],
+    "books": [
+      {
+        "id": 1,
+        "bookname": "Toi thay hoa vang tren co xanh",
+        "author": "Nguyen Nhat Anh",
+        "producer": "Kim Dong",
+        "price": "200.000",
+        "amount": 50
+      },
+      {
+        "id": 2,
+        "bookname": "Muoi van cau hoi vi sao",
+        "author": "Nguyen Thi Thi Tho",
+        "producer": "BGD & DT VN",
+        "price": "200.000",
+        "amount": 50
+      },
+      {
+        "id": 4,
+        "bookname": "abc",
+        "author": "unknow",
+        "producer": "Disney"
+      },
+      {
+        "id": 5,
+        "bookname": "abc",
+        "author": "Jone",
+        "producer": "Kim Đồng",
+        "price": "6.600.000",
+        "amount": "23"
+      },
+      {
+        "id": 6,
+        "bookname": "abc",
+        "author": "unknow",
+        "producer": "Marvel",
+        "price": "18.000.000",
+        "amount": "23"
+      },
+      {
+        "id": 8,
+        "bookname": "abc",
+        "author": "abc",
+        "producer": "Disney",
+        "price": "18.000.000",
+        "amount": "23"
+      }
+    ]
+  }

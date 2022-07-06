@@ -1,0 +1,10 @@
+.login{
+    width: 400px;
+    position: relative;
+    left: 500px;
+}
+
+.login button {
+    margin-top: 30px;
+    margin-left: 150px;
+}
