@@ -1,0 +1,9 @@
+.login-page {
+    width: 300px;
+    left: 40%;
+    position: absolute;
+}
+.btn-submit{
+    padding-top: 10px ;
+    padding-left: 100px;
+}

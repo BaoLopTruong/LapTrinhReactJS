@@ -1,0 +1,18 @@
+
+.createpage{
+    width:  400px;
+    position: relative;
+    left: 500px;
+}
+.btn-secondary {
+   float: right;
+}
+
+.title {
+    padding-bottom: 20px;
+}
+
+/* .btn-success {
+   margin-top: 20px;
+   margin-left: 180px;
+} */
